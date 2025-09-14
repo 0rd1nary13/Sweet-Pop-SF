@@ -1,6 +1,7 @@
 import React from 'react';
 import TanghuluCard from './TanghuluCard';
 import { TanghuluItem } from '../types/tanghulu';
+import { colors } from '../theme/theme';
 
 interface TanghuluGridProps {
   items: TanghuluItem[];
@@ -27,7 +28,7 @@ const TanghuluGrid: React.FC<TanghuluGridProps> = ({ items, title }) => {
     left: 0,
     width: '60px',
     height: '3px',
-    background: '#B71C1C'
+    background: colors.primary
   };
 
   return (

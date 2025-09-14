@@ -6,6 +6,7 @@ import TanghuluGrid from '../components/TanghuluGrid';
 import HistorySection from '../components/HistorySection';
 import { getTanghuluData, getTanghuluByCategory } from '../services/tanghuluData';
 import { TanghuluCategory } from '../types/tanghulu';
+import { colors } from '../theme/theme';
 
 const HomeScreen: React.FC = () => {
   const allTanghulu = getTanghuluData();
@@ -39,7 +40,7 @@ const HomeScreen: React.FC = () => {
     transform: 'translateX(-50%)',
     width: '80px',
     height: '3px',
-    background: '#B71C1C'
+    background: colors.primary
   };
 
   const varietiesStyle: React.CSSProperties = {

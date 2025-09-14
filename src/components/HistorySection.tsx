@@ -4,7 +4,7 @@ import { colors } from '../theme/theme';
 const HistorySection: React.FC = () => {
   const sectionStyle: React.CSSProperties = {
     padding: '4rem 1rem',
-    background: '#f8f9fa',
+    background: colors.secondary,
   };
 
   const containerStyle: React.CSSProperties = {
