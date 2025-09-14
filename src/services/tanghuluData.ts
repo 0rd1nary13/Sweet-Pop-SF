@@ -127,8 +127,10 @@ export const getTanghuluByCategory = (category: TanghuluCategory): TanghuluItem[
   return data.categories[category] || [];
 };
 
-export default {
+const tanghuluService = {
   getTanghuluData,
   getTanghuluById,
   getTanghuluByCategory
-}; 
+};
+
+export default tanghuluService;
