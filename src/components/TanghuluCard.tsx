@@ -46,7 +46,7 @@ const TanghuluCard: React.FC<TanghuluCardProps> = ({ item }) => {
 
   const popularityBarStyle: React.CSSProperties = {
     height: '4px',
-    background: '#eee',
+    background: colors.secondary,
     borderRadius: '2px',
     marginTop: spacing.medium,
     overflow: 'hidden'

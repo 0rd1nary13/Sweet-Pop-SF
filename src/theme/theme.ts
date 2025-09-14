@@ -1,9 +1,9 @@
 export const colors = {
-  primary: '#B71C1C',  // Deep red (representing the color of candied hawthorn)
-  secondary: '#FFCDD2', // Light pink
+  primary: '#FF69B4',  // Vibrant pink for primary actions
+  secondary: '#FFE4E8', // Soft pink accents
   text: '#212121',     // Dark gray for text
-  background: '#FFFBF5', // Light cream background
-  accent: '#4CAF50',   // Green for accents
+  background: '#FFFFFF', // Clean white background
+  accent: '#FFC0CB',   // Light pink for highlights
 };
 
 export const fontSizes = {
