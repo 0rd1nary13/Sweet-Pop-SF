@@ -5,7 +5,6 @@ import HeroSection from '../components/HeroSection';
 import TanghuluGrid from '../components/TanghuluGrid';
 import HistorySection from '../components/HistorySection';
 import { getTanghuluData, getTanghuluByCategory } from '../services/tanghuluData';
-import { TanghuluCategory } from '../types/tanghulu';
 import { colors } from '../theme/theme';
 
 const HomeScreen: React.FC = () => {
