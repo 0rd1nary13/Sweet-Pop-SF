@@ -40,7 +40,6 @@ const Footer: React.FC = () => {
         </div>
         <div style={linksStyle}>
           <a href="#varieties" style={linkStyle}>Varieties</a>
-          <a href="#history" style={linkStyle}>History</a>
           <a href="#gallery" style={linkStyle}>Gallery</a>
           <a href="#about" style={linkStyle}>About</a>
         </div>

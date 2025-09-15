@@ -47,11 +47,10 @@ const Header: React.FC = () => {
       <div style={containerStyle}>
         <a href="/" style={logoStyle}>
           <span role="img" aria-label="Tanghulu">🍡</span>
-          <span>Sweet Pop</span>
+          <span>Sweet Pop SF</span>
         </a>
         <nav style={navStyle}>
           <a href="#varieties" style={navLinkStyle}>Varieties</a>
-          <a href="#history" style={navLinkStyle}>History</a>
           <a href="#gallery" style={navLinkStyle}>Gallery</a>
           <a href="#about" style={navLinkStyle}>About</a>
         </nav>

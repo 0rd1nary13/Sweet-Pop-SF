@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
           <span role="img" aria-label="Tanghulu">🍡</span> Sweet Pop
         </h1>
         <p style={subtitleStyle}>
-          Discover the sweet and tangy world of Tanghulu - a traditional Chinese treat featuring
+          Discover the sweet and tangy world of Sweet Pop SF -- Tanghulu - a traditional Chinese treat featuring
           fruits coated in a crispy sugar shell. From classic hawthorn to modern fruit varieties.
         </p>
         <p style={{ fontSize: '1.2rem', marginBottom: '2rem', opacity: 0.9 }}>
@@ -66,7 +66,6 @@ const HeroSection: React.FC = () => {
         </p>
         <div>
           <a href="#varieties" style={buttonStyle}>Explore Varieties</a>
-          <a href="#history" style={secondaryButtonStyle}>Learn History</a>
         </div>
       </div>
     </div>
