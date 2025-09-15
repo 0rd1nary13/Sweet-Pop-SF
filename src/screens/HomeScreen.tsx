@@ -2,17 +2,12 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
-import TanghuluGrid from '../components/TanghuluGrid';
 import HistorySection from '../components/HistorySection';
-import { getTanghuluData, getTanghuluByCategory } from '../services/tanghuluData';
+import { getTanghuluData } from '../services/tanghuluData';
 import { colors } from '../theme/theme';
 
 const HomeScreen: React.FC = () => {
   const allTanghulu = getTanghuluData();
-  const popularItems = [...allTanghulu.items].sort((a, b) => b.popularity - a.popularity).slice(0, 4);
-  const traditionalItems = getTanghuluByCategory('traditional');
-  const fruitItems = getTanghuluByCategory('fruit');
-  const modernItems = getTanghuluByCategory('modern');
 
   const aboutSectionStyle: React.CSSProperties = {
     padding: '4rem 1rem',
@@ -61,19 +56,142 @@ const HomeScreen: React.FC = () => {
               <div style={titleLineStyle}></div>
             </h2>
             
-            <TanghuluGrid items={popularItems} title="Most Popular" />
-            
-            {traditionalItems.length > 0 && (
-              <TanghuluGrid items={traditionalItems} title="Traditional" />
-            )}
-            
-            {fruitItems.length > 0 && (
-              <TanghuluGrid items={fruitItems} title="Fruit Varieties" />
-            )}
-            
-            {modernItems.length > 0 && (
-              <TanghuluGrid items={modernItems} title="Modern Creations" />
-            )}
+            <div style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '2rem',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '2rem 0',
+              flexWrap: 'wrap'
+            }}>
+              {allTanghulu.items.map((item) => (
+                <div key={item.id} style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  padding: '1.5rem',
+                  border: `2px solid ${colors.primary}`,
+                  borderRadius: '12px',
+                  backgroundColor: 'white',
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                  minWidth: '300px'
+                }}>
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    style={{
+                      width: '120px',
+                      height: '120px',
+                      objectFit: 'cover',
+                      borderRadius: '8px',
+                      border: `2px solid ${colors.primary}`
+                    }}
+                  />
+                  <div style={{
+                    fontSize: '1.3rem',
+                    fontWeight: '600',
+                    color: colors.text,
+                    textAlign: 'center'
+                  }}>
+                    {item.name}
+                  </div>
+                  <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '0.8rem',
+                    width: '100%'
+                  }}>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem'
+                    }}>
+                      <span style={{
+                        fontSize: '1.1rem',
+                        fontWeight: '500',
+                        color: colors.text
+                      }}>
+                        甜度:
+                      </span>
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.3rem'
+                      }}>
+                        <div style={{
+                          width: '120px',
+                          height: '12px',
+                          backgroundColor: '#e0e0e0',
+                          borderRadius: '6px',
+                          overflow: 'hidden'
+                        }}>
+                          <div style={{
+                            width: `${(item.sweetness || 0) * 10}%`,
+                            height: '100%',
+                            backgroundColor: item.sweetness && item.sweetness >= 7 ? '#ff6b6b' : item.sweetness && item.sweetness >= 5 ? '#ffa726' : '#66bb6a',
+                            borderRadius: '6px',
+                            transition: 'width 0.3s ease'
+                          }}></div>
+                        </div>
+                        <span style={{
+                          fontSize: '1rem',
+                          fontWeight: '600',
+                          color: colors.text,
+                          minWidth: '20px'
+                        }}>
+                          {item.sweetness}
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem'
+                    }}>
+                      <span style={{
+                        fontSize: '1.1rem',
+                        fontWeight: '500',
+                        color: colors.text
+                      }}>
+                        人气:
+                      </span>
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '0.3rem'
+                      }}>
+                        <div style={{
+                          width: '120px',
+                          height: '12px',
+                          backgroundColor: '#e0e0e0',
+                          borderRadius: '6px',
+                          overflow: 'hidden'
+                        }}>
+                          <div style={{
+                            width: `${(item.popularity || 0) * 10}%`,
+                            height: '100%',
+                            backgroundColor: item.popularity && item.popularity >= 8 ? '#4caf50' : item.popularity && item.popularity >= 6 ? '#ff9800' : '#2196f3',
+                            borderRadius: '6px',
+                            transition: 'width 0.3s ease'
+                          }}></div>
+                        </div>
+                        <span style={{
+                          fontSize: '1rem',
+                          fontWeight: '600',
+                          color: colors.text,
+                          minWidth: '20px'
+                        }}>
+                          {item.popularity}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
         

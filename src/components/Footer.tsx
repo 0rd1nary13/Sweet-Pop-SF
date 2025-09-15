@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
     <footer style={footerStyle}>
       <div style={containerStyle}>
         <div style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>
-          <span role="img" aria-label="Tanghulu">🍡</span> 糖葫芦 Tanghulu
+          <span role="img" aria-label="Tanghulu">🍡</span> Sweet Pop
         </div>
         <div style={linksStyle}>
           <a href="#varieties" style={linkStyle}>Varieties</a>
@@ -44,8 +44,11 @@ const Footer: React.FC = () => {
           <a href="#gallery" style={linkStyle}>Gallery</a>
           <a href="#about" style={linkStyle}>About</a>
         </div>
-        <p style={{ marginTop: '1rem', opacity: 0.8 }}>
-          &copy; {currentYear} Tanghulu Showcase. All rights reserved.
+        <p style={{ marginTop: '1rem', opacity: 0.8, textAlign: 'center' }}>
+          📍 752 Grant Ave, San Francisco, CA 94108
+        </p>
+        <p style={{ marginTop: '0.5rem', opacity: 0.8 }}>
+          &copy; {currentYear} Sweet Pop. All rights reserved.
         </p>
       </div>
     </footer>

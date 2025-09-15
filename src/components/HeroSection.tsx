@@ -55,11 +55,14 @@ const HeroSection: React.FC = () => {
     <div style={heroStyle}>
       <div style={contentStyle}>
         <h1 style={titleStyle}>
-          <span role="img" aria-label="Tanghulu">🍡</span> 糖葫芦 Tanghulu
+          <span role="img" aria-label="Tanghulu">🍡</span> Sweet Pop
         </h1>
         <p style={subtitleStyle}>
           Discover the sweet and tangy world of Tanghulu - a traditional Chinese treat featuring
           fruits coated in a crispy sugar shell. From classic hawthorn to modern fruit varieties.
+        </p>
+        <p style={{ fontSize: '1.2rem', marginBottom: '2rem', opacity: 0.9 }}>
+          📍 752 Grant Ave, San Francisco, CA 94108
         </p>
         <div>
           <a href="#varieties" style={buttonStyle}>Explore Varieties</a>

@@ -47,7 +47,7 @@ const Header: React.FC = () => {
       <div style={containerStyle}>
         <a href="/" style={logoStyle}>
           <span role="img" aria-label="Tanghulu">🍡</span>
-          <span>糖葫芦 Tanghulu</span>
+          <span>Sweet Pop</span>
         </a>
         <nav style={navStyle}>
           <a href="#varieties" style={navLinkStyle}>Varieties</a>

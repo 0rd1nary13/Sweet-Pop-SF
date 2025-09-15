@@ -7,6 +7,7 @@ export interface TanghuluItem {
   ingredients: string[];
   origin?: string;
   popularity: number; // 1-10 scale
+  sweetness?: number; // 1-10 scale for sweetness level
 }
 
 export type TanghuluCategory = 'traditional' | 'modern' | 'fruit' | 'special';
